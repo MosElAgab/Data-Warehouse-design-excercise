@@ -1,0 +1,39 @@
+You are now connected to database "top_model" as user "yangzhang".
+DROP TABLE
+SELECT 7
+
+here categories table
+  category   |   agent   |    area     
+-------------+-----------+-------------
+ Glamour     | Rose      | Crewe
+ Parts       | Kev       | London
+ Promotional | Alex      | Online
+ Commercial  | Christian | Stockholm
+ Swimsuit    | Katherine | Athens
+ Fashion     | Verity    | Milan
+ Fitness     | Paul      | Los Angeles
+(7 rows)
+
+DROP TABLE
+SELECT 14
+
+here is third normal form table
+
+ model_id |    model_name    |  category   | price_per_event |      trait       | rating |    event_date     | revenue 
+----------+------------------+-------------+-----------------+------------------+--------+-------------------+---------
+        1 | Bartholomew P    | Fashion     |          499.99 | Pro strutter     |      7 | 15 November 2022  | 2999.94
+        2 | Notso Neat       | Promotional |            9.99 | The dadbod drop  |      1 | 12 September 2022 |  149.85
+        3 | Jarred MacKenzie | Fitness     |             170 | Fire_eating      |      4 | 8 January 2022    |    1530
+        4 | Rathbones Arr    | Parts       |          263.82 | Hand modelling   |      5 | 6 March 2022      | 1846.74
+        5 | Sarah B          | Promotional |          432.25 | Influencer       |      7 | 23 October 2022   |    3458
+        6 | Cat Wang         | Fashion     |             600 | Catwalker        |      8 | 14 May 2022       |    3600
+        7 | Starr Schema     | Glamour     |             250 | Databases        |      5 | 12 September 2022 |    1500
+        8 | Sam Pagne        | Swimsuit    |          899.99 | Old-money        |      9 | 20 January 2022   | 9899.89
+        9 | Salle De Bain    | Commercial  |             150 | Architect        |      3 | 16 July 2022      |    1050
+       10 | Slam Dunk        | Fitness     |          801.65 | High-tops        |      9 | 23 August 2022    | 7214.85
+       11 | Hannah Bee       | Fashion     |             325 | Photography      |      6 | 1 March 2022      |    1625
+       12 | Rainsface W      | Swimsuit    |             120 | Impromptu crying |      3 | 14 May 2022       |     480
+       13 | Raul Pogerson    | Commercial  |              50 | Messy eating     |      2 | 12 September 2022 |     950
+       14 | Ray Z            | Parts       |          470.68 | Card magic       |      7 | 18 April 2022     | 5177.48
+(14 rows)
+

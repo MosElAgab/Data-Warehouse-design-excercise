@@ -1,0 +1,5 @@
+DROP DATABASE
+CREATE DATABASE
+You are now connected to database "top_model" as user "yangzhang".
+CREATE TABLE
+INSERT 0 14

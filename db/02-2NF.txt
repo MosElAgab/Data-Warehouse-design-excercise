@@ -1,0 +1,72 @@
+You are now connected to database "top_model" as user "yangzhang".
+DROP TABLE
+SELECT 28
+
+here is our new brands table
+
+ model_id |       brand       
+----------+-------------------
+        1 | Louboutin
+        1 | H&M
+        2 | Aldi
+        2 | Poundland
+        3 | Pategonia
+        3 | Buff
+        3 | Salomon
+        4 | Adidas
+        5 | Ebay
+        5 | Vinted
+        5 | Instagram
+        6 | Charities
+        7 | Oricle
+        7 | Marks and Spencer
+        8 | Harrods
+        8 | HSBC
+        9 | Ikea
+        9 | Wayfair
+        9 | Amazon
+       10 | Nike
+       10 | Adidas
+       10 | Reebok
+       11 | Chanel
+       11 | Dior
+       11 | Stella McCartney
+       12 | United Utilities
+       13 | Listo Burritos
+       14 | Marvel Studios
+(28 rows)
+
+DROP TABLE
+SELECT 14
+
+here second normal form table
+
+ model_id |    model_name    |    area     | price_per_event |  category   |   agent   |      trait       | rating |    event_date     | revenue 
+----------+------------------+-------------+-----------------+-------------+-----------+------------------+--------+-------------------+---------
+        1 | Bartholomew P    | Milan       |          499.99 | Fashion     | Verity    | Pro strutter     |      7 | 15 November 2022  | 2999.94
+        2 | Notso Neat       | Online      |            9.99 | Promotional | Alex      | The dadbod drop  |      1 | 12 September 2022 |  149.85
+        3 | Jarred MacKenzie | Los Angeles |             170 | Fitness     | Paul      | Fire_eating      |      4 | 8 January 2022    |    1530
+        4 | Rathbones Arr    | London      |          263.82 | Parts       | Kev       | Hand modelling   |      5 | 6 March 2022      | 1846.74
+        5 | Sarah B          | Online      |          432.25 | Promotional | Alex      | Influencer       |      7 | 23 October 2022   |    3458
+        6 | Cat Wang         | Milan       |             600 | Fashion     | Verity    | Catwalker        |      8 | 14 May 2022       |    3600
+        7 | Starr Schema     | Crewe       |             250 | Glamour     | Rose      | Databases        |      5 | 12 September 2022 |    1500
+        8 | Sam Pagne        | Athens      |          899.99 | Swimsuit    | Katherine | Old-money        |      9 | 20 January 2022   | 9899.89
+        9 | Salle De Bain    | Stockholm   |             150 | Commercial  | Christian | Architect        |      3 | 16 July 2022      |    1050
+       10 | Slam Dunk        | Los Angeles |          801.65 | Fitness     | Paul      | High-tops        |      9 | 23 August 2022    | 7214.85
+       11 | Hannah Bee       | Milan       |             325 | Fashion     | Verity    | Photography      |      6 | 1 March 2022      |    1625
+       12 | Rainsface W      | Athens      |             120 | Swimsuit    | Katherine | Impromptu crying |      3 | 14 May 2022       |     480
+       13 | Raul Pogerson    | Stockholm   |              50 | Commercial  | Christian | Messy eating     |      2 | 12 September 2022 |     950
+       14 | Ray Z            | London      |          470.68 | Parts       | Kev       | Card magic       |      7 | 18 April 2022     | 5177.48
+(14 rows)
+
+
+here a list for all tables we have created so far in our db
+                List of relations
+ Schema |        Name        | Type  |   Owner   
+--------+--------------------+-------+-----------
+ public | brands             | table | yangzhang
+ public | first_normal_form  | table | yangzhang
+ public | models             | table | yangzhang
+ public | second_normal_form | table | yangzhang
+(4 rows)
+
