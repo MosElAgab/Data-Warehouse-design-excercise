@@ -1,0 +1,77 @@
+You are now connected to database "top_model" as user "yangzhang".
+DROP TABLE
+SELECT 7
+ALTER TABLE
+
+here dim_area table:
+
+ area_id |    area     
+---------+-------------
+       1 | Online
+       2 | Crewe
+       3 | London
+       4 | Athens
+       5 | Milan
+       6 | Stockholm
+       7 | Los Angeles
+(7 rows)
+
+DROP TABLE
+SELECT 7
+ALTER TABLE
+
+here dim_categories table:
+
+ category_id |  category   
+-------------+-------------
+           1 | Promotional
+           2 | Glamour
+           3 | Swimsuit
+           4 | Commercial
+           5 | Parts
+           6 | Fitness
+           7 | Fashion
+(7 rows)
+
+DROP TABLE
+SELECT 7
+ALTER TABLE
+
+here dim_categories table:
+
+ agent_id |   agent   
+----------+-----------
+        1 | Christian
+        2 | Rose
+        3 | Paul
+        4 | Verity
+        5 | Alex
+        6 | Katherine
+        7 | Kev
+(7 rows)
+
+DROP TABLE
+SELECT 11
+ALTER TABLE
+ALTER TABLE
+UPDATE 11
+ALTER TABLE
+UPDATE 11
+
+here dim_event_date table:
+
+ event_date_id | year_quarter | financial_year 
+---------------+--------------+----------------
+ 2022-01-08    |            1 | 21/22
+ 2022-01-20    |            1 | 21/22
+ 2022-03-01    |            2 | 21/22
+ 2022-03-06    |            2 | 21/22
+ 2022-04-18    |            2 | 21/22
+ 2022-05-14    |            2 | 21/22
+ 2022-07-16    |            3 | 22/23
+ 2022-08-23    |            3 | 22/23
+ 2022-09-12    |            4 | 22/23
+ 2022-10-23    |            4 | 22/23
+ 2022-11-15    |            4 | 22/23
+(11 rows)
+

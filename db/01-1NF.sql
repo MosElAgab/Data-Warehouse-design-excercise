@@ -13,3 +13,4 @@ SELECT * FROM first_normal_form;
 
 \echo '\nhere a list for all tables we have created so far in our db'
 \dt
+

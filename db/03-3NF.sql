@@ -8,6 +8,9 @@ FROM
 second_normal_form
 )
 ;
+ALTER TABLE categories
+ADD COLUMN category_id SERIAL PRIMARY KEY
+;
 
 \echo '\nhere categories table'
 SELECT * FROM categories
@@ -17,8 +20,9 @@ DROP TABLE IF EXISTS third_normal_form
 ;
 
 CREATE TABLE third_normal_form AS (
-    SELECT model_id, model_name, category, price_per_event, trait, rating, event_date, revenue
+    SELECT second_normal_form.model_id, second_normal_form.model_name, categories.category_id, second_normal_form.price_per_event, second_normal_form.trait, second_normal_form.rating, second_normal_form.event_date, second_normal_form.revenue
     FROM second_normal_form
+    JOIN categories ON second_normal_form.category = categories.category
     ORDER BY model_id ASC
 )
 ;

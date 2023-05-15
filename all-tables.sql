@@ -3,6 +3,8 @@
 \echo '\nhere a list for all tables we have created so far in our db'
 \dt
 
+\echo '\nSection 1: OLTP\n'
+
 \echo '\nhere models table\n'
 
 SELECT * FROM models
@@ -14,6 +16,10 @@ SELECT * FROM first_normal_form
 
 \echo '\nhere is our new brands table\n'
 SELECT * FROM brands
+;
+
+\echo '\nhere models_brands \n'
+SELECT * FROM models_brands
 ;
 
 \echo '\nhere second normal form table\n'
@@ -28,3 +34,5 @@ SELECT * FROM categories
 
 SELECT * FROM third_normal_form
 ;
+
+\echo '\nSection 2: OLAP\n'

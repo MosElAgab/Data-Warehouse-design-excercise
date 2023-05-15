@@ -1,0 +1,39 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table models {
+  model_id integer [primary key]
+  model_name text
+  category_id integer
+  price_per_event integer
+  trait text
+  rating integer
+  event_date timestamp
+  revenue integer 
+}
+
+Table categories {
+  category_id integer [primary key]
+  category varchar 
+  agent varchar
+  area varchar
+}
+
+
+
+Table model_brands {
+  model_brand_id integer [primary key]
+  model_id integer
+  brand_id integer
+}
+
+Table brands {
+  brand_id integer [primary key]
+  brand varchar
+}
+
+Ref: model_brands.brand_id > brands.brand_id // many-to-one
+
+Ref: model_brands.model_id > models.model_id // many-to-one
+
+Ref: models.category_id > categories.category_id // many-to-one

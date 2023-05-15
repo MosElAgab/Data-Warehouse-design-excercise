@@ -14,7 +14,7 @@ CREATE TABLE models
     brand TEXT,
     trait VARCHAR(60),
     rating INT, 
-    event_date TEXT, 
+    event_date DATE, 
     revenue  FLOAT
 );
 

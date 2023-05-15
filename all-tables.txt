@@ -8,9 +8,13 @@ here a list for all tables we have created so far in our db
  public | categories         | table | yangzhang
  public | first_normal_form  | table | yangzhang
  public | models             | table | yangzhang
+ public | models_brands      | table | yangzhang
  public | second_normal_form | table | yangzhang
  public | third_normal_form  | table | yangzhang
-(6 rows)
+(7 rows)
+
+
+Section 1: OLTP
 
 
 here models table
@@ -71,36 +75,70 @@ here first normal form table
 
 here is our new brands table
 
- model_id |       brand       
-----------+-------------------
-        1 | Louboutin
-        1 | H&M
-        2 | Aldi
-        2 | Poundland
-        3 | Pategonia
-        3 | Buff
-        3 | Salomon
-        4 | Adidas
-        5 | Ebay
-        5 | Vinted
-        5 | Instagram
-        6 | Charities
-        7 | Oricle
-        7 | Marks and Spencer
-        8 | Harrods
-        8 | HSBC
-        9 | Ikea
-        9 | Wayfair
-        9 | Amazon
-       10 | Nike
-       10 | Adidas
-       10 | Reebok
-       11 | Chanel
-       11 | Dior
-       11 | Stella McCartney
-       12 | United Utilities
-       13 | Listo Burritos
-       14 | Marvel Studios
+       brand       | brand_id 
+-------------------+----------
+ Amazon            |        1
+ Vinted            |        2
+ Wayfair           |        3
+ HSBC              |        4
+ Salomon           |        5
+ Louboutin         |        6
+ Aldi              |        7
+ Buff              |        8
+ Listo Burritos    |        9
+ Chanel            |       10
+ United Utilities  |       11
+ Dior              |       12
+ Reebok            |       13
+ Instagram         |       14
+ Stella McCartney  |       15
+ H&M               |       16
+ Oricle            |       17
+ Poundland         |       18
+ Nike              |       19
+ Ebay              |       20
+ Harrods           |       21
+ Ikea              |       22
+ Charities         |       23
+ Pategonia         |       24
+ Adidas            |       25
+ Marvel Studios    |       26
+ Marks and Spencer |       27
+(27 rows)
+
+
+here models_brands 
+
+ model_id | brand_id | model_brand_id 
+----------+----------+----------------
+        1 |        6 |              1
+        1 |       16 |              2
+        2 |        7 |              3
+        2 |       18 |              4
+        3 |       24 |              5
+        3 |        8 |              6
+        3 |        5 |              7
+        4 |       25 |              8
+        5 |       20 |              9
+        5 |        2 |             10
+        5 |       14 |             11
+        6 |       23 |             12
+        7 |       17 |             13
+        7 |       27 |             14
+        8 |       21 |             15
+        8 |        4 |             16
+        9 |       22 |             17
+        9 |        3 |             18
+        9 |        1 |             19
+       10 |       19 |             20
+       10 |       25 |             21
+       10 |       13 |             22
+       11 |       10 |             23
+       11 |       12 |             24
+       11 |       15 |             25
+       12 |       11 |             26
+       13 |        9 |             27
+       14 |       26 |             28
 (28 rows)
 
 
@@ -126,35 +164,38 @@ here second normal form table
 
 
 here categories table
-  category   |   agent   |    area     
--------------+-----------+-------------
- Glamour     | Rose      | Crewe
- Parts       | Kev       | London
- Promotional | Alex      | Online
- Commercial  | Christian | Stockholm
- Swimsuit    | Katherine | Athens
- Fashion     | Verity    | Milan
- Fitness     | Paul      | Los Angeles
+  category   |   agent   |    area     | category_id 
+-------------+-----------+-------------+-------------
+ Glamour     | Rose      | Crewe       |           1
+ Parts       | Kev       | London      |           2
+ Promotional | Alex      | Online      |           3
+ Commercial  | Christian | Stockholm   |           4
+ Swimsuit    | Katherine | Athens      |           5
+ Fashion     | Verity    | Milan       |           6
+ Fitness     | Paul      | Los Angeles |           7
 (7 rows)
 
 
 here is third normal form table
 
- model_id |    model_name    |  category   | price_per_event |      trait       | rating |    event_date     | revenue 
+ model_id |    model_name    | category_id | price_per_event |      trait       | rating |    event_date     | revenue 
 ----------+------------------+-------------+-----------------+------------------+--------+-------------------+---------
-        1 | Bartholomew P    | Fashion     |          499.99 | Pro strutter     |      7 | 15 November 2022  | 2999.94
-        2 | Notso Neat       | Promotional |            9.99 | The dadbod drop  |      1 | 12 September 2022 |  149.85
-        3 | Jarred MacKenzie | Fitness     |             170 | Fire_eating      |      4 | 8 January 2022    |    1530
-        4 | Rathbones Arr    | Parts       |          263.82 | Hand modelling   |      5 | 6 March 2022      | 1846.74
-        5 | Sarah B          | Promotional |          432.25 | Influencer       |      7 | 23 October 2022   |    3458
-        6 | Cat Wang         | Fashion     |             600 | Catwalker        |      8 | 14 May 2022       |    3600
-        7 | Starr Schema     | Glamour     |             250 | Databases        |      5 | 12 September 2022 |    1500
-        8 | Sam Pagne        | Swimsuit    |          899.99 | Old-money        |      9 | 20 January 2022   | 9899.89
-        9 | Salle De Bain    | Commercial  |             150 | Architect        |      3 | 16 July 2022      |    1050
-       10 | Slam Dunk        | Fitness     |          801.65 | High-tops        |      9 | 23 August 2022    | 7214.85
-       11 | Hannah Bee       | Fashion     |             325 | Photography      |      6 | 1 March 2022      |    1625
-       12 | Rainsface W      | Swimsuit    |             120 | Impromptu crying |      3 | 14 May 2022       |     480
-       13 | Raul Pogerson    | Commercial  |              50 | Messy eating     |      2 | 12 September 2022 |     950
-       14 | Ray Z            | Parts       |          470.68 | Card magic       |      7 | 18 April 2022     | 5177.48
+        1 | Bartholomew P    |           6 |          499.99 | Pro strutter     |      7 | 15 November 2022  | 2999.94
+        2 | Notso Neat       |           3 |            9.99 | The dadbod drop  |      1 | 12 September 2022 |  149.85
+        3 | Jarred MacKenzie |           7 |             170 | Fire_eating      |      4 | 8 January 2022    |    1530
+        4 | Rathbones Arr    |           2 |          263.82 | Hand modelling   |      5 | 6 March 2022      | 1846.74
+        5 | Sarah B          |           3 |          432.25 | Influencer       |      7 | 23 October 2022   |    3458
+        6 | Cat Wang         |           6 |             600 | Catwalker        |      8 | 14 May 2022       |    3600
+        7 | Starr Schema     |           1 |             250 | Databases        |      5 | 12 September 2022 |    1500
+        8 | Sam Pagne        |           5 |          899.99 | Old-money        |      9 | 20 January 2022   | 9899.89
+        9 | Salle De Bain    |           4 |             150 | Architect        |      3 | 16 July 2022      |    1050
+       10 | Slam Dunk        |           7 |          801.65 | High-tops        |      9 | 23 August 2022    | 7214.85
+       11 | Hannah Bee       |           6 |             325 | Photography      |      6 | 1 March 2022      |    1625
+       12 | Rainsface W      |           5 |             120 | Impromptu crying |      3 | 14 May 2022       |     480
+       13 | Raul Pogerson    |           4 |              50 | Messy eating     |      2 | 12 September 2022 |     950
+       14 | Ray Z            |           2 |          470.68 | Card magic       |      7 | 18 April 2022     | 5177.48
 (14 rows)
+
+
+Section 2: OLAP
 

@@ -1,0 +1,42 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table fact_models {
+  model_id integer [primary key]
+  model_name varchar
+  area_id integer
+  price_per_event integer
+  category_id integer
+  brand list
+  trait varchar
+  revenue integer
+  agent_id integer
+  event_date_id date
+  }
+
+
+Table dim_area {
+  area_id integer [primary key]
+  area varchar
+}
+
+Table dim_categories {
+  category_id integer [primary key]
+  category varchar
+}
+
+Table dim_agents {
+  agent_id integer [primary key]
+  agent varchar
+}
+
+Table dim_event_date {
+  event_date_id date [primary key]
+  financial_year varchar
+  quarter int
+}
+
+Ref: dim_area.area_id > fact_models.area_id
+Ref: dim_categories.category_id > fact_models.category_id
+Ref: dim_event_date.event_date_id > fact_models.event_date_id
+Ref: dim_agents.agent_id > fact_models.agent_id
