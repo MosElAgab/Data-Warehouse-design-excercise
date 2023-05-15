@@ -36,3 +36,19 @@ SELECT * FROM third_normal_form
 ;
 
 \echo '\nSection 2: OLAP\n'
+
+\echo '\nhere dim_area table:\n'
+SELECT area_id, area FROM dim_area 
+;
+
+\echo '\nhere dim_category table:\n'
+SELECT category_id, category FROM dim_category
+;
+
+\echo '\nhere dim_agent table:\n'
+SELECT agent_id, agent FROM dim_agent
+;
+
+\echo '\nhere dim_event_date table:\n'
+SELECT * FROM dim_event_date
+;

@@ -3,7 +3,7 @@ DROP TABLE
 SELECT 7
 ALTER TABLE
 
-here dim_area table:
+here dim_area table: 
 
  area_id |    area     
 ---------+-------------
@@ -74,4 +74,41 @@ here dim_event_date table:
  2022-10-23    |            4 | 22/23
  2022-11-15    |            4 | 22/23
 (11 rows)
+
+DROP TABLE
+SELECT 14
+ALTER TABLE
+UPDATE 14
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+UPDATE 14
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+UPDATE 14
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+
+here fact_models table: 
+
+ model_id |    model_name    | price_per_event |             brand              |      trait       | rating | event_date_id | revenue | area_id | category_id | agent_id 
+----------+------------------+-----------------+--------------------------------+------------------+--------+---------------+---------+---------+-------------+----------
+        1 | Bartholomew P    |          499.99 | Louboutin, H&M                 | Pro strutter     |      7 | 2022-11-15    | 2999.94 |       5 |           7 |        4
+        2 | Notso Neat       |            9.99 | Aldi, Poundland                | The dadbod drop  |      1 | 2022-09-12    |  149.85 |       1 |           1 |        5
+        3 | Jarred MacKenzie |             170 | Pategonia, Buff, Salomon       | Fire_eating      |      4 | 2022-01-08    |    1530 |       7 |           6 |        3
+        4 | Rathbones Arr    |          263.82 | Adidas                         | Hand modelling   |      5 | 2022-03-06    | 1846.74 |       3 |           5 |        7
+        5 | Sarah B          |          432.25 | Ebay, Vinted, Instagram        | Influencer       |      7 | 2022-10-23    |    3458 |       1 |           1 |        5
+        6 | Cat Wang         |             600 | Charities                      | Catwalker        |      8 | 2022-05-14    |    3600 |       5 |           7 |        4
+        7 | Starr Schema     |             250 | Oricle, Marks and Spencer      | Databases        |      5 | 2022-09-12    |    1500 |       2 |           2 |        2
+        8 | Sam Pagne        |          899.99 | Harrods, HSBC                  | Old-money        |      9 | 2022-01-20    | 9899.89 |       4 |           3 |        6
+        9 | Salle De Bain    |             150 | Ikea, Wayfair, Amazon          | Architect        |      3 | 2022-07-16    |    1050 |       6 |           4 |        1
+       10 | Slam Dunk        |          801.65 | Nike, Adidas, Reebok           | High-tops        |      9 | 2022-08-23    | 7214.85 |       7 |           6 |        3
+       11 | Hannah Bee       |             325 | Chanel, Dior, Stella McCartney | Photography      |      6 | 2022-03-01    |    1625 |       5 |           7 |        4
+       12 | Rainsface W      |             120 | United Utilities               | Impromptu crying |      3 | 2022-05-14    |     480 |       4 |           3 |        6
+       13 | Raul Pogerson    |              50 | Listo Burritos                 | Messy eating     |      2 | 2022-09-12    |     950 |       6 |           4 |        1
+       14 | Ray Z            |          470.68 | Marvel Studios                 | Card magic       |      7 | 2022-04-18    | 5177.48 |       3 |           5 |        7
+(14 rows)
 
